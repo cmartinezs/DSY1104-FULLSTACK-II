@@ -1,0 +1,16 @@
+div {
+    /*border: 1px solid black; /*width, style, color*/
+    border-radius: 50%;
+    border-width: 2px 5px;
+    border-style: double;
+    border-color: blueviolet;
+    border-top: dotted red;
+    border-left-color: green;
+    padding: 10px;
+    margin: 10px;
+    display:inline;
+}
+
+body {
+    /*margin: 0;*/
+}
