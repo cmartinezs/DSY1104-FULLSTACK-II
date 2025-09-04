@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form action="submit.html" method="post">
+        <label for="name">Nombre:</label></br>
+        <input type="text" id="name" name="name" required>
+        </br>
+        <label for="email">Correo electrónico:</label></br>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="message">Mensaje:</label></br>
+        <textarea id="message" name="message" required></textarea>
+        <br>
+        <label for="date">Fecha y hora:</label></br>
+        <input type="datetime-local" id="date" name="date" required>
+        <br>
+        <label for="age">Edad:</label></br>
+        <input type="number" id="age" name="age" required>
+        <label for="age">Seleccione su edad:</label>
+        <select id="age" name="age" required>
+            <option value="" disabled selected>Seleccione su edad</option>
+            <option value="rango_1">18-25</option>
+            <option value="rango_2">26-35</option>
+            <option value="rango_3">36-45</option>
+            <option value="rango_4">46+</option>
+        </select>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
