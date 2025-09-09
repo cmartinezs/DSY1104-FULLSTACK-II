@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Datos recibidos</title>
+</head>
+<body>
+  <h1>Datos del registro</h1>
+  <div id="data"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nombres = params.get("nombres");
+    const apellidos = params.get("apellidos");
+    const fechaNacimiento = params.get("fechaNacimiento");
+    const email = params.get("email");
+
+    document.getElementById("data").innerText =
+      `Nombres: ${nombres}\nApellidos: ${apellidos}\nFecha nacimiento: ${fechaNacimiento}\nCorreo: ${email}`;
+  </script>
+</body>
+</html>
