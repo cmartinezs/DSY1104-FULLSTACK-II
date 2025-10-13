@@ -1,37 +1,21 @@
 import { Table } from "react-bootstrap";
+import DynamicTHead from "./DynamicTHead";
+import DynamicTBody from "./DynamicTBody";
 
-const DataGrid = (props) => {
-  //Como obtengo los nombres de los campos de un json?
+const DynamicDataGrid = ({ title, data }) => {
+  const fields = Object.keys(data[0]);
 
-  const fields = Object.keys(props.data[0]);
-  console.log(fields);
   return (
     <div className="col-xl-6 col-sm-12">
-      <h2>{props.title}</h2>
+      <h2>{title}</h2>
       <div className="border rounded" style={{ maxHeight: '400px', overflowY: 'auto' }}>
         <Table striped bordered hover className="mb-0">
-          <thead className="sticky-top bg-light">
-            <tr>
-              {fields.map((field) => (
-                <th key={field}>{field}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {props.data.map((item) => {
-              return (
-                <tr key={item.id}>
-                  {fields.map((field) => (
-                    <td key={field}>{item[field]}</td>
-                  ))}
-                </tr>
-              );
-            })}
-          </tbody>
+          <DynamicTHead fields={fields} className="sticky-top bg-light" />
+          <DynamicTBody data={data} fields={fields} />
         </Table>
       </div>
     </div>
   );
 };
 
-export default DataGrid;
+export default DynamicDataGrid;

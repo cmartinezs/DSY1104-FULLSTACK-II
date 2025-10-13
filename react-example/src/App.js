@@ -3,7 +3,7 @@ import "./App.css";
 import HelloWorld from "./components/HelloWorld";
 import Counter from "./components/Counter";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import DataGrid from "./components/DataGrid";
+import DynamicDataGrid from "./components/DataGrid";
 
 function App() {
 
@@ -69,8 +69,8 @@ function App() {
       <HelloWorld message="Hello 2" />
       <HelloWorld message="Hello 3" />
       <Counter />
-      <DataGrid data={users} title="User Data" />
-      <DataGrid data={cars} title="Car Data" />
+      <DynamicDataGrid data={users} title="User Data" />
+      <DynamicDataGrid data={cars} title="Car Data" />
         </Container>
     </div>
   );
